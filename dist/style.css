@@ -21,3 +21,4 @@
 .analysis-jumps{position:sticky;top:0;z-index:6;display:flex;gap:8px;padding:12px 0;margin-bottom:15px;background:var(--paper);border-bottom:1px solid var(--line)}.prose-analysis>.panel{scroll-margin-top:75px}@media(max-width:760px){.prose-analysis>.panel:nth-child(2){order:-1}}
 @media print{.analysis-jumps{display:none}}
 .annotation-type{font-size:9px;font-weight:400;color:var(--muted);margin-left:8px;border:1px solid var(--line);padding:1px 4px;border-radius:3px}
+@media(max-width:760px){.filter-controls{flex-wrap:wrap;min-width:0}.filter-controls select{flex:1 1 140px;min-width:0;max-width:100%}.filter-controls .result-count{flex:none;white-space:nowrap}}
