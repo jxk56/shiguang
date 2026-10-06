@@ -2,7 +2,15 @@
 
 按年级、学制和教材册次学习古诗词与文言文。支持原文拼音、关键词注释、逐句及全文白话译文、理解赏析、遮字背诵、朗读、原创练习、错题本和学习记录。
 
-公开网站：https://shiguang-school-poetry.xtc49321.chatgpt.site/
+网站文件位于 `dist/`，无需构建，也不需要服务器或第三方运行时服务。
+
+## 发布到 GitHub Pages
+
+1. 在自己的 GitHub 账号下创建一个空仓库，不要预先添加 README、`.gitignore` 或许可证。把本目录 `site/` 作为仓库根目录，推送到 `main` 分支。`work/` 和 `outputs/` 是仓库外的工作资料，不应上传。
+2. 打开该仓库的 **Settings → Pages**，在 **Build and deployment → Source** 中选择 **GitHub Actions**。
+3. 本仓库的 `.github/workflows/pages.yml` 会在每次推送 `main` 后直接发布 `dist/`。首次发布成功后，在 Pages 设置页或 Actions 的部署结果中获取网址，通常为 `https://用户名.github.io/仓库名/`。
+
+页面的脚本和样式使用相对路径，诗文目录使用 `#` 路由，因此可在 GitHub Pages 的仓库子路径下运行。学习记录存于当前网址对应的浏览器本地存储；从旧网址迁移时，先在“我的学习”导出，再在新网址导入。
 
 ## 本地阅读
 
@@ -13,7 +21,8 @@
 - dist/index.html、dist/style.css、dist/app.js：页面与交互。
 - dist/data.js：页面加载的数据。
 - dist/poetry-data.json：完整古诗文、释义、题目和教材归属数据。
-- .openai/hosting.json：既有 Sites 项目标识与静态目录。
+- .github/workflows/pages.yml：GitHub Pages 自动发布流程。
+- .openai/hosting.json：既有 Sites 项目标识与静态目录；GitHub Pages 发布流程只上传 `dist/`，不会使用该配置。
 
 ## 内容与教材范围
 

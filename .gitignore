@@ -1,0 +1,27 @@
+# Dependencies and local environment
+node_modules/
+.env
+.env.*
+!.env.example
+.edgeone/
+
+# Credentials and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Caches, generated reports, and temporary files
+.cache/
+.parcel-cache/
+.turbo/
+.next/
+.vite/
+coverage/
+*.log
+tmp/
+temp/
+
+# Operating system files
+.DS_Store
+Thumbs.db
